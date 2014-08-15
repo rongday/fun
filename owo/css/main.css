@@ -6,6 +6,10 @@ body {
       }
 
       /* Custom container */
+      .container {
+        
+      }
+
       .container-narrow {
         margin: 0 auto;
         max-width: 1000px;
@@ -37,13 +41,18 @@ body {
       }
       .alert-info { width: 150px; position: fixed; top:50px; left: 40%;}
 h1 a.logo { 
-  background: url("../img/logo-crown1.png") center center; 
+  background: url("../img/logo-crown-all.png"); 
   width: 100px; 
   height: 100px;
   display: block;
   margin: 0 auto;
 }
 h1 a.logo:hover {
-  background: url("../img/logo-crown-2b.png") center center; 
+  background: url("../img/logo-crown-all.png") 0 -100px; 
 }
 .marketing .first-span { margin-left: 0;}
+.input-append input,.input-append select,.input-append .uneditable-input { height: 100%;}
+
+.row-fluid .span3:nth-child(4n+1) {
+  margin-left: 0;
+}
