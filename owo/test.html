@@ -11,6 +11,9 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.zclip.js"></script>
 <script>
 $(document).ready(function() {
  
@@ -35,6 +38,18 @@ $(document).ready(function() {
         });
     };
 });
+$(function(){
+    $('a.btn').zclip({
+        path:'js/ZeroClipboard.swf',
+        copy:function(){
+            return $($(this).attr("href")).val();
+        }
+    }).click(function(){
+        //$("#get-it").show();
+        $("#get-it").fadeToggle(1000).fadeToggle(1000);
+    }); 
+});
+
 </script>
 </head>
 
@@ -85,21 +100,9 @@ $(document).ready(function() {
     </div>
     <!-- /container -->
 
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.zclip.js"></script>
+
+
 <script>
-$(function(){
-    $('a.btn').zclip({
-        path:'js/ZeroClipboard.swf',
-        copy:function(){
-            return $($(this).attr("href")).val();
-        }
-    }).click(function(){
-        //$("#get-it").show();
-        $("#get-it").fadeToggle(1000).fadeToggle(1000);
-    }); 
-});
 
 </script>
 <script>
