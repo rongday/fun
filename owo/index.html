@@ -85,6 +85,8 @@ $(function(){
         }
     }).click(function(){
         //$("#get-it").show();
+        var alertleft = self.innerWidth/2-110 + "px";
+        $(".alert-info").css("left", alertleft);
         $("#get-it").fadeToggle(1000).fadeToggle(1000);
     }); 
 });

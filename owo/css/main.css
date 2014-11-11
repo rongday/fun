@@ -40,7 +40,7 @@ body {
       .marketing p + h4 {
         margin-top: 28px;
       }
-      .alert-info { width: 150px; position: fixed; top:50px; left: 40%;}
+      .alert-info { width: 150px; position: fixed; top:150px;}
 h1 a.logo { 
   background: url("../img/logo-crown-all.png"); 
   width: 100px; 
