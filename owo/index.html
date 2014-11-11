@@ -31,10 +31,16 @@ $(document).ready(function() {
  
             //在前台呈現所有的 face
             for( var i = 0; i <length; i++ ){
-                $('.content').append('<div class="span3"><p><div class="input-append"><input class="input-small" id="face'+i+'" type="text" value="'+face[i]+'" readonly><a class="btn btn-medium choose-btn" id="#face'+i+'" href="#top"><i class="icon-gift"></i> Choose!</a></div></p></div>');
+                $('.content').append('<div class="span3"><p><div class="input-append"><input class="input-small" id="face'+i+'" type="text" value="'+face[i]+'" readonly><a class="btn btn-medium choose-btn" id="#face'+i+'"><i class="icon-gift"></i> Choose!</a></div></p></div>');
             }
             $('a.choose-btn').click(function() {
                 $('#choose').val($($(this).attr("id")).val());
+                var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                $body.animate({
+                    scrollTop: 0
+                }, 600);
+ 
+        return false;
             });
         });
     };
