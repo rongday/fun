@@ -1,46 +1,54 @@
 body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-        background: url("https://farm9.staticflickr.com/8406/15745868786_48f01e8e76_o.png");
-        background-size: cover;
-        /*background: #F4F0DE;*/
-      }
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: url("https://farm9.staticflickr.com/8406/15745868786_48f01e8e76_o.png");
+  background-size: cover;
+  /*background: #F4F0DE;*/
+}
 
-      /* Custom container */
-      .container {
-        
-      }
+/* Custom container */
+.container {
+  
+}
 
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 1000px;
-      }
-      .container-narrow > hr {
-        margin: 30px 0;
-      }
+.container-narrow {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+  border: 0; 
+  height: 1px; 
+  background: #333; 
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc); 
+  clear: both;
+}
 
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 60px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 72px;
-        line-height: 1;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
 
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-      .alert-info { width: 150px; position: fixed; top:150px;}
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+.alert-info { width: 150px; position: fixed; top:150px;}
 h1 a.logo { 
   background: url("../img/logo-crown-all.png"); 
   width: 100px; 
@@ -66,3 +74,9 @@ input:read-only {
     background-color: #fff;
     cursor: pointer;
 } 
+.message, .choosed {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 20px 50px;
+  width: auto;
+}

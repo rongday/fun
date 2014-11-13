@@ -43,17 +43,21 @@ $(document).ready(function() {
         return false;
             });
         });
-    };
-
-    
+    };  
 });
 </script>
-
 </head>
-
-
-
 <body>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=326960413990708&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
     <div class="container-narrow">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
@@ -72,9 +76,10 @@ $(document).ready(function() {
                 再點選上方的 <code><i class="icon-gift"></i> Copy!</code> 就可以複製囉。<br>
                 不支援 flash 的 iOS 系統可以直接點左邊文字框選取複製喔！
             </p>
+            <div class="fb-like" data-href="http://fun.rongday.com/owo/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         </div>
-        <hr>
-        <div class="row-fluid text-center">
+        
+        <div class="row-fluid text-center choosed">
             <div><p><div class="input-append"><input class="input" id="choose" type="text" value=""><a class="btn copy-btn" id="copy-btn"><i class="icon-gift"></i> Copy!</a></div></p></div>
 <script>
 $(function(){
@@ -92,21 +97,34 @@ $(function(){
 });
 
 </script>
-        </div>
-
-        <hr style=" clear: both;">
-
+        </div>     
+        <hr>
         <div class="row-fluid content">
-
         </div>
-        <hr style=" clear: both;">
+        <hr>
+        <div class="row-fluid message">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'fun-owo'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        <hr>
         <div class="footer">
             <p>
                 <!-- Histats.com  START (html only)-->
-<a href="http://www.histats.com" alt="page hit counter" target="_blank" >
-<embed src="http://s10.histats.com/605.swf"  flashvars="jver=1&acsid=2540108&domi=4"  quality="high"  width="110" height="55" name="605.swf"  align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" /></a>
-<img  src="http://sstatic1.histats.com/0.gif?2540108&101" alt="" border="0">
-<!-- Histats.com  END  -->
+                <a href="http://www.histats.com" alt="page hit counter" target="_blank" >
+                <embed src="http://s10.histats.com/605.swf"  flashvars="jver=1&acsid=2540108&domi=4"  quality="high"  width="110" height="55" name="605.swf"  align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" /></a>
+                <img  src="http://sstatic1.histats.com/0.gif?2540108&101" alt="" border="0">
+                <!-- Histats.com  END  -->
             </p>
             <p class="copyright" align="right">
                 &copy; rongday.com 
