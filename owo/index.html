@@ -35,6 +35,7 @@ $(document).ready(function() {
             }
             $('a.choose-btn').click(function() {
                 $('#choose').val($($(this).attr("id")).val());
+                //$('#choose').attr('value', $($(this).attr("id")).val());
                 var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
                 $body.animate({
                     scrollTop: 300
