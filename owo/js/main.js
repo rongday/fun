@@ -9,7 +9,7 @@ client.on( "ready", function( readyEvent ) {
   client.on( "aftercopy", function( event ) {
     // `this` === `client`
     // `event.target` === the element that was clicked
-    event.target.style.display = "none";
+    //event.target.style.display = "none"; //after press #copy-btn disapper
     //alert("Copied text to clipboard: " + event.data["text/plain"] );
     var alertleft = self.innerWidth/2-110 + "px";
     $(".alert-info").css("left", alertleft);
