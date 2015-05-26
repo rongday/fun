@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-05-26 23:25:45
+ * @version $Id$
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*main*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*For IE 6&7 only*/
+}
+header {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 20px;
+}
+header nav {
+	width: 1200px;
+	margin: 0 auto;
+}
+header nav h1 {
+	width: 25%;
+	float: left;
+}
+header nav ul {
+	width: 70%;
+	float: right;
+	text-align: right;
+}
+header nav ul li {
+	display: inline-block;
+}
+.container {
+
+}
+.container .rate, .container .history{
+	width: 1200px;
+	margin: 20px auto;
+	text-align: center;
+}
+.container .rate .rate_top {
+	text-align: right;
+}
+.container .rate .rate_top h2,
+.container .history .history_top h2
+ {
+	text-align: left;
+}
+.container .rate .rate_top input {
+	border: 1px solid #555;
+}
+.container .rate .rate_content {
+	width: 368px;
+	float: left;
+	margin: 15px;
+	border: 1px solid #ccc;
+}
+.container .rate .rate_content h3 {
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+	background: #3399cc;
+	color: #fff;
+	margin-bottom: 15px;
+}
+.container .rate .rate_content .bid,
+.container .rate .rate_content .ask {
+	float: left;
+	margin: 0 auto;
+	width: 162px;
+	border: 1px solid #ccc;
+	margin: 10px 10px 25px;
+	padding-top: 15px;
+}
+
+.container .rate .rate_content .bid button,
+.container .rate .rate_content .ask button {
+	width: 100%;
+	border: 0;
+	margin-top: 15px;
+	color: #fff;
+}
+.container .rate .rate_content .bid button {
+	background: green;
+}
+.container .rate .rate_content .ask button {
+	background: red;
+}
+.container .history table {
+	width: 100%;
+	margin: 15px; 
+	text-align: left;
+}
+.container .history table th,
+.container .history table td {
+	padding: 5px 10px;
+}
+.container .history table thead tr {
+	background: #ccc;
+}
+.container .history table tbody tr {
+	background: green;
+}
+.container .history table tbody tr:nth-child(even) {
+	background: red;
+}
