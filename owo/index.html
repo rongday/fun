@@ -35,6 +35,7 @@ $(document).ready(function() {
             }
             $('a.choose-btn').click(function() {
                 $('#choose').val($($(this).attr("id")).val());
+                //$('#choose').attr('value', $($(this).attr("id")).val());
                 var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
                 $body.animate({
                     scrollTop: 300
@@ -80,23 +81,10 @@ $(document).ready(function() {
         </div>
         
         <div class="row-fluid text-center choosed">
-            <div><p><div class="input-append"><input class="input" id="choose" type="text" value=""><a class="btn copy-btn" id="copy-btn"><i class="icon-gift"></i> Copy!</a></div></p></div>
-<script>
-$(function(){
-    $('a.copy-btn').zclip({
-        path:'js/ZeroClipboard.swf',
-        copy:function(){
-            return $('#choose').val();
-        }
-    }).click(function(){
-        //$("#get-it").show();
-        var alertleft = self.innerWidth/2-110 + "px";
-        $(".alert-info").css("left", alertleft);
-        $("#get-it").fadeToggle(1000).fadeToggle(1000);
-    }); 
-});
-
-</script>
+            <div><p><div class="input-append">
+                <input class="input" id="choose" type="text" value="">
+                <a class="btn copy-btn" id="copy-btn" data-clipboard-target="choose"><i class="icon-gift"></i> Copy!</a>
+            </div></p></div>
         </div>     
         <hr>
         <div class="row-fluid content">
@@ -142,8 +130,9 @@ $(function(){
 
     </div>
     <!-- /container -->
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.zclip.js"></script>
+<script src="js/jquery-1.6.4.min.js"></script>
+<script src="js/ZeroClipboard.js"></script>
+<script src="js/main.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
