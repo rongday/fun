@@ -35,6 +35,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
 	line-height: 1;
 }
@@ -53,6 +59,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+	text-decoration: none;
+}
 
 
 /*main*/
@@ -67,17 +76,35 @@ table {
 .clearfix {
   *zoom: 1; /*For IE 6&7 only*/
 }
+*::-moz-selection {
+    background: #f0bf00;
+    color: #333;
+}
+body, input, button {
+    font-family: "Lato","Helvetica Neue",Helvetica,"微軟正黑體";
+    font-size: 1em;
+    background: #f2f2f2;
+}
 header {
 	border-bottom: 1px solid #ccc;
-	padding: 10px 20px;
+	background: #FFF;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
 }
 header nav {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 header nav h1 {
 	width: 25%;
 	float: left;
+	font-size: 1.5em;
 }
 header nav ul {
 	width: 70%;
@@ -87,11 +114,34 @@ header nav ul {
 header nav ul li {
 	display: inline-block;
 }
+header nav ul li a {
+	background-color: #e6e6e6;
+    border: 0 none rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.3em 1em;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+	background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+	background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
 .container {
-
+	margin-top: 65px;
+}
+.container .col3 {
+	width: 33%;
+	display: inline-block;
+    letter-spacing: normal;
+    text-rendering: auto;
+    vertical-align: top;
+    word-spacing: normal;
 }
 .container .rate, .container .history{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 20px auto;
 	text-align: center;
 }
@@ -102,21 +152,50 @@ header nav ul li {
 .container .history .history_top h2
  {
 	text-align: left;
+	font-size: 1.4em;
+	font-weight: 400;
+	border-left: 5px solid #129fea;
+	padding-left: 7px;
+	height: 25px;
+	line-height: 25px;
+}
+.container .rate .rate_top label {
+	background: #129fea;
+	padding: 0.5em 0.6em;
+	color: #fff;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	position: relative;
+	right: -6px;
+	border: 1px solid #129fea;
+	cursor: pointer;
+	vertical-align: middle;
 }
 .container .rate .rate_top input {
-	border: 1px solid #555;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    padding: 0.5em 0.6em;
+    vertical-align: middle;
+    background: #FFF;
 }
 .container .rate .rate_content {
-	width: 368px;
-	float: left;
 	margin: 15px;
 	border: 1px solid #ccc;
+	background: #FFF;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.container .rate .rate_top input:focus,
+.container .rate .rate_content:hover {
+	border-color: #129fea;
+	
 }
 .container .rate .rate_content h3 {
-	padding: 5px;
-	border-bottom: 1px solid #ccc;
-	background: #3399cc;
-	color: #fff;
+	padding: 8px;
+	border-bottom: 1px dashed #ccc;
+	/*background: rgb(66, 184, 221);
+	color: #fff;*/
 	margin-bottom: 15px;
 }
 .container .rate .rate_content .bid,
@@ -135,17 +214,29 @@ header nav ul li {
 	border: 0;
 	margin-top: 15px;
 	color: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out 0s;
+	padding: 3px 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .container .rate .rate_content .bid button {
-	background: green;
+	background: rgb(28, 184, 65);
 }
 .container .rate .rate_content .ask button {
-	background: red;
+	background: rgb(202, 60, 60);
+}
+.container .rate .rate_content .bid button:hover {
+	background: rgba(28, 184, 65, 0.8);
+}
+.container .rate .rate_content .ask button:hover {
+	background: rgba(202, 60, 60, 0.8);
 }
 .container .history table {
 	width: 100%;
-	margin: 15px; 
+	margin: 15px 0; 
 	text-align: left;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	border: 1px solid #ccc;
 }
 .container .history table th,
 .container .history table td {
@@ -155,8 +246,8 @@ header nav ul li {
 	background: #ccc;
 }
 .container .history table tbody tr {
-	background: green;
+	background: rgba(28, 184, 65, 0.1);
 }
 .container .history table tbody tr:nth-child(even) {
-	background: red;
+	background: rgba(202, 60, 60, 0.2);
 }
