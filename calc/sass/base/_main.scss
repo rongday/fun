@@ -1,0 +1,67 @@
+.calcApp {
+    max-width: 555px;
+    margin: 15% auto;
+    .section {
+        clear: both;
+        padding: 0;
+        margin: 0;
+        &:first-child {
+            border-top: 5px solid #555;
+        }
+        .col {
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            display: block;
+            float: left;
+            border: 5px solid #555;
+            border-top: 0;
+            border-left: 0; 
+            cursor: pointer;
+            &:first-child {
+                border-left: 5px solid #555;
+            }
+            &:hover {
+                background-color: #f0f0ff
+            }
+        }
+        input {
+            background: transparent;
+        }
+    }
+    .group {
+        &:before,
+        &:after {
+            content: "";
+            display: table
+        }
+        &:after {
+            clear: both
+        }
+    }
+    .c4of4 {
+        width: 100%
+    }
+    .c3of4 {
+        width: 75%
+    }
+    .c2of4 {
+        width: 50%
+    }
+    .c1of4 {
+        width: 25%
+    }
+    .result {
+        padding: 0 20px;
+        input {
+            width: 100%;
+            border: 0;
+            background: transparent;
+        }
+        
+    }
+}
+
+
+
+

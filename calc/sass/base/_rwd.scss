@@ -1,0 +1,39 @@
+/* Media Queries
+/*---------------------------------------------*/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .inner {
+        width: 85%;
+        img {
+            width:100%;
+        }
+    }
+    #header {
+        margin-bottom: 40px;
+        h1 {
+          a {
+            font-size: 1em;
+          }
+        }
+        .menu-icon {
+          display: inline-block;
+        }
+        nav {
+          a {
+            color: #000;
+            &:hover {
+              color: #afe1da;
+            }
+          }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    #header {
+        margin-bottom: 30px;
+
+    }
+}

@@ -1,0 +1,171 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-08-09 11:14:40
+ * @version $Id$
+ */
+/* Reset Styles
+/*---------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+  display: block;
+}
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/* make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* Sharper Thumbnails */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.calcApp {
+  max-width: 555px;
+  margin: 15% auto;
+}
+.calcApp .section {
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+.calcApp .section:first-child {
+  border-top: 5px solid #555;
+}
+.calcApp .section .col {
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  display: block;
+  float: left;
+  border: 5px solid #555;
+  border-top: 0;
+  border-left: 0;
+  cursor: pointer;
+}
+.calcApp .section .col:first-child {
+  border-left: 5px solid #555;
+}
+.calcApp .section .col:hover {
+  background-color: #f0f0ff;
+}
+.calcApp .section input {
+  background: transparent;
+}
+.calcApp .group:before, .calcApp .group:after {
+  content: "";
+  display: table;
+}
+.calcApp .group:after {
+  clear: both;
+}
+.calcApp .c4of4 {
+  width: 100%;
+}
+.calcApp .c3of4 {
+  width: 75%;
+}
+.calcApp .c2of4 {
+  width: 50%;
+}
+.calcApp .c1of4 {
+  width: 25%;
+}
+.calcApp .result {
+  padding: 0 20px;
+}
+.calcApp .result input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+/* Media Queries
+/*---------------------------------------------*/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .inner {
+    width: 85%;
+  }
+  .inner img {
+    width: 100%;
+  }
+
+  #header {
+    margin-bottom: 40px;
+  }
+  #header h1 a {
+    font-size: 1em;
+  }
+  #header .menu-icon {
+    display: inline-block;
+  }
+  #header nav a {
+    color: #000;
+  }
+  #header nav a:hover {
+    color: #afe1da;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #header {
+    margin-bottom: 30px;
+  }
+}
