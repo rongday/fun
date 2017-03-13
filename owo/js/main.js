@@ -16,3 +16,21 @@ client.on( "ready", function( readyEvent ) {
     $("#get-it").fadeToggle(1000).fadeToggle(1000);
   } );
 } );
+
+// $('a.choose-btn').click(function() {
+//         $('#choose').val($($(this).attr("id")).val());
+//         //$('#choose').attr('value', $($(this).attr("id")).val());
+//         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+//         $body.animate({
+//             scrollTop: 300
+//         }, 600);
+
+// return false;
+//     });
+    
+    
+function showAlert(){
+    var alertleft = self.innerWidth/2-110 + "px";
+    $(".alert-info").css("left", alertleft);
+    $("#get-it").fadeToggle(1000).fadeToggle(1000);
+}    
