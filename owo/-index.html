@@ -31,7 +31,7 @@ $(document).ready(function() {
  
             //在前台呈現所有的 face
             for( var i = 0; i <length; i++ ){
-                $('.content').append('<div class="col-md-3 col-sm-4 col-xs-12"><div class="input-group"><input type="text" class="form-control"  id="face'+i+'" value="'+face[i]+'" readonly><span class="input-group-btn"><button class="btn" type="button" data-clipboard-target="#face'+i+'"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Copy!</button></span></div></div>');
+                $('.content').append('<div class="span3"><div class="input-append"><input class="input-small" id="face'+i+'" type="text" value="'+face[i]+'" readonly><a class="btn btn-medium choose-btn" data-clipboard-target="#face'+i+'"><i class="icon-gift"></i> Copy!</a></div></div>');
             }
         });
     };  
@@ -63,7 +63,7 @@ $(document).ready(function() {
         <div class="jumbotron">
             <h1 id="top"><a href="http://fun.rongday.com/owo" class="logo"></a></h1>
             <p class="lead">
-                點選文字框右邊的 <code><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Copy!</code> 就可以複製表情，<br>
+                點選下方 <code><i class="icon-gift"></i> Copy!</code> 就可以選取左邊文字框裡的表情，<br>
                 不支援 flash 的 iOS 系統也可以直接複製喔！
             </p>
             <div class="fb-like" data-href="http://fun.rongday.com/owo/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
