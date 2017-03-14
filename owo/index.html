@@ -112,7 +112,7 @@ $(document).ready(function() {
                 </script>
             </p>
         </div>
-        <div class="alert alert-info hide" id="get-it">
+        <div class="alert alert-info" id="get-it" style="display: none;">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <h4>Well done!</h4>
             <i class="icon-ok"></i> 已複製到剪貼簿！
@@ -134,14 +134,13 @@ $(document).ready(function() {
 var clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
-    showAlert()
-
+    showAlert();
     e.clearSelection();
 });
 
 clipboard.on('error', function(e) {
-    // console.error('Action:', e.action);
-    // console.error('Trigger:', e.trigger);
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
 });
 
 function showAlert(){
