@@ -69,8 +69,7 @@ input:-moz-read-only { /* For Firefox */
     background-color: #fff;
     cursor: pointer;
 }
-
-input:read-only, .form-control[readonly] {
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: #fff;
     cursor: pointer;
     height: auto;
